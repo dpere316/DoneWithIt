@@ -25,7 +25,9 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   buttonsContainer:{
-      padding:20
+      padding:20,
+      
+     
   }
 });
 export default WelcomeScreen;

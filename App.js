@@ -1,22 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import WelcomeScreen from './app/screens/WelcomeScreen';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import Card from "./app/components/Card";
+import RecipeDetailsScreen from './app/screens/recipeDetailsScreen'
 
 export default function App() {
-  
   return (
-    <WelcomeScreen/>
+    <RecipeDetailsScreen/>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
-
