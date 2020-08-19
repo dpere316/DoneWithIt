@@ -4,6 +4,7 @@ import { View, StyleSheet, Image } from 'react-native';
 import AppText from './AppText/AppText';
 import colors from '../config/colors';
 
+
 function Card({title, subtitle, image}) {
 
     return (
@@ -14,11 +15,13 @@ function Card({title, subtitle, image}) {
             <AppText style={styles.title}>{title}</AppText>
             <AppText style={styles.subtitle}>{subtitle}</AppText>
             </View>
+            
         </View>
     );
 }
 
 const styles = StyleSheet.create({
+
     card:{
         borderRadius:15,
         backgroundColor: colors.white,

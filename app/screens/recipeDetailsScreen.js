@@ -1,17 +1,20 @@
 import React from "react";
-import { Image, StyleSheet, SafeAreaView } from "react-native";
+import { Image, StyleSheet, SafeAreaView, TouchableWithoutFeedback } from "react-native";
 import AppText from "../components/AppText/AppText";
-import AppButton from "../components/AppButton";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 function recipeDetailsScreen(props) {
   return (
     <SafeAreaView>
+    
+
+     <MaterialCommunityIcons onPress = {() => console.log('add to faves')} style={styles.faveIcon} name ='heart' size={30} color ='red'/>
+    
       <AppText style={styles.title}>Mixed Berry Melody</AppText>
       <Image
         style={styles.image}
         source={require("../../assets/images/photo.png")}
       />
-      <AppButton title="Log Meal" onPress={() => console.log("Log Meal")} />
     </SafeAreaView>
   );
 }
@@ -21,8 +24,15 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 300,
   },
+  faveIcon:{
+    position:'absolute',
+    top:50,
+    right:30
+  },
+
   title: {
     textAlign: "center",
+    paddingTop:40,
     paddingBottom: 10,
   },
 });
